@@ -168,7 +168,7 @@ MAX_TOKENS_LLM = 2048            # Max tokens for summary
 OUTPUT_LANGUAGE = "brazilian portuguese"  # Output language
 ```
 
-## �️ Troubleshooting
+## 🔧 Troubleshooting
 
 ### Common Issues
 
