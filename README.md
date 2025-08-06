@@ -307,51 +307,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
-
-### Development Setup
-
-1. **Fork the repository**
-2. **Clone your fork**:
-   ```bash
-   git clone https://github.com/yourusername/audio-summarizer.git
-   cd audio-summarizer
-   ```
-3. **Create a virtual environment**:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-4. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. **Make your changes**
-6. **Test your changes**:
-   ```bash
-   ./run.sh            # Test main application
-   ```
-7. **Submit a pull request**
-
-### Development Areas
-
-- Support for more audio formats
-- Graphical user interface (GUI)
-- Integration with other study tools
-- LLM prompt improvements
-- Batch processing support
-- Docker containerization
-- Web interface
-- Cloud deployment options
-
-### Code Style
-
-- Follow PEP 8 standards
-- Use type hints
-- Add docstrings to all functions and classes
-- Include unit tests for new features
-
----
+All contributions are appreciated!
 
 ## 📞 Support
 
