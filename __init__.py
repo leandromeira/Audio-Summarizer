@@ -9,10 +9,10 @@ Run with: ./run.sh or python3 main.py
 
 Author: Leandro Meira Marinho Queiróz
 License: MIT
-Version: 1.0.0
+Version: 2.0.0
 """
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __author__ = "Leandro Meira Marinho Queiróz"
 __license__ = "MIT"
 __description__ = "Intelligent audio transcription and summarization tool (standalone)"
