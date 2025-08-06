@@ -99,7 +99,9 @@ wget -P models/ https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/re
 wget -P models/ https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q8_0.gguf
 ```
 
-> **Note:** Adjust the `LLM_MODEL_PATH` in `transcribe_and_summarize.py` if using a different model.
+> **Note:** Adjust the `LLM_MODEL_PATH` in `config.py` if using a different model.
+
+> 💡 **Tip:** Want to test different models? Try [LM Studio](https://lmstudio.ai/) to easily download, test, and compare various LLM models before choosing the best one for your needs. You can then copy the model file to the `models/` folder.
 
 ---
 
