@@ -3,16 +3,18 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Whisper](https://img.shields.io/badge/Whisper-OpenAI-green.svg)](https://github.com/openai/whisper)
-[![LLM](https://img.shields.io/badge/LLM-Mistral_7B-purple.svg)](https://mistral.ai/)
+[![LLM](https://img.shields.io/badge/LLM-GPT--OSS_20B-purple.svg)](https://huggingface.co/microsoft/gpt-oss-20b)
 
-An intelligent tool for transcribing and summarizing audio files using Whisper for transcription and a local LLM (Mistral) for summarization.
+An intelligent tool for transcribing and summarizing audio files using Whisper for transcription and a local LLM for summarization.
+
+> 🆕 **NEW**: Now uses **GPT-OSS 20B** as the default model! This latest open-source language model provides enhanced summarization quality and better understanding of complex topics. Mistral models are still fully supported as alternatives.
 
 ---
 
 ## 🧠 Features
 
 - **Automatic audio transcription** using OpenAI Whisper (`medium` model)
-- **Intelligent summarization** with local LLM (Mistral 7B Instruct)
+- **Intelligent summarization** with local LLM
 - **Structured outputs** in Markdown format
 - **Educational summaries** with key concepts, practical applications, study suggestions, and recommended resources
 - **Automatic processing** of the latest audio file
@@ -32,7 +34,7 @@ An intelligent tool for transcribing and summarizing audio files using Whisper f
 ### 📋 Current Project Configuration
 
 - **Whisper Model:** `medium` (Portuguese language)
-- **LLM Model:** `Mistral-7B-Instruct-v0.3-Q8_0.gguf`
+- **LLM Model:** `gpt-oss-20b-UD-Q8_K_XL.gguf` (GPT-OSS 20B)
 - **LLM Context:** 8192 tokens
 - **GPU Layers:** 20 (adjust according to your GPU)
 - **Max Tokens:** 2048 per summary
@@ -77,26 +79,32 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 The `medium` model will be downloaded automatically on first run.
 
-#### 📚 LLM Models (Mistral 7B Instruct)
+#### 📚 LLM Models
 
 Download one of the GGUF models from Hugging Face and place it in the `models/` folder:
 
-**Option 1: Q8_0 (best quality, heavier)**
+**🆕 Option 1: GPT-OSS 20B (default - latest & powerful)**
+
+```bash
+wget -P models/ https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-UD-Q8_K_XL.gguf
+```
+
+**Option 2: Mistral 7B v0.3 (alternative)**
+
+```bash
+wget -P models/ https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q8_0.gguf
+```
+
+**Option 3: Mistral 7B Q8_0 (best quality, heavier)**
 
 ```bash
 wget -P models/ https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q8_0.gguf
 ```
 
-**Option 2: Q5_K_M (balanced)**
+**Option 4: Mistral 7B Q5_K_M (balanced)**
 
 ```bash
 wget -P models/ https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q5_K_M.gguf
-```
-
-**Option 3: Mistral 7B v0.3 (newest)**
-
-```bash
-wget -P models/ https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q8_0.gguf
 ```
 
 > **Note:** Adjust the `LLM_MODEL_PATH` in `config.py` if using a different model.
@@ -163,7 +171,7 @@ Edit variables in `config.py`:
 ```python
 # Main configurations
 WHISPER_MODEL = "medium"          # small, base, medium, large
-LLM_MODEL_PATH = "models/..."     # Path to your model
+LLM_MODEL_PATH = "models/gpt-oss-20b-UD-Q8_K_XL.gguf"  # GPT-OSS or Mistral
 N_CTX = 8192                      # LLM context
 N_GPU_LAYERS = 20                 # Adjust according to your GPU
 MAX_TOKENS_LLM = 2048            # Max tokens for summary
@@ -324,6 +332,7 @@ If you encounter issues:
 
 ## 📈 Version History
 
+- **v2.1.0** - Added GPT-OSS 20B support as default model, enhanced summarization quality
 - **v2.0.0** - Complete refactor with modular architecture
 - **v1.0.0** - Initial monolithic implementation
 
