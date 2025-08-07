@@ -43,5 +43,5 @@ Here is the transcript:
 \"\"\"
 
 Please return a clean, well-organized Markdown file.
-Language of the summary: {OUTPUT_LANGUAGE}.
+Language of the summary: {output_language}.
 """
