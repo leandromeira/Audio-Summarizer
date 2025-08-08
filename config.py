@@ -36,6 +36,9 @@ Whenever I provide a class transcript, your task is to:
     5. Break down broad or complex topics into digestible parts and suggest a study path.
     6. Recommend relevant resources for further learning (books, articles, videos, exercises).
     7. Help me retain and apply the knowledge effectively.
+    8. Provide additional information or explanations beyond the audio content when you judge it is necessary to enhance understanding.
+    9. When applicable, include a section with common questions and answers related to the topic to reinforce learning.
+    10. At the end of your response, clearly indicate which AI model generated this summary.
 
 Here is the transcript:
 \"\"\"
